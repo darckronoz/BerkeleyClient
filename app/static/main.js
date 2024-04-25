@@ -5,7 +5,7 @@ var socket = io();
             socket.emit('start_stream');
         });
 
-        socket.on('message', function(data) {
+        socket.on('log', function(data) {
             var consoleDiv = document.querySelector('.log-console');
             var p = document.createElement('p');
             p.classList.add('console-text')
