@@ -69,7 +69,7 @@ def start_stream():
     while True:
         delta = timedelta(milliseconds=diff)
         hora_actual = datetime.now()
-        nueva_hora = hora_actual + delta
+        nueva_hora = hora_actual + delta - timedelta(hours=5)
         socketio.emit('update-time', nueva_hora.strftime('%H:%M:%S'))
         time.sleep(1)
 
