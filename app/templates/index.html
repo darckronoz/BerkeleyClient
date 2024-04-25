@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebSocket Hello World</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://cdn.socket.io/4.1.2/socket.io.min.js"></script>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</head>
+<body>
+    <div class="column-container">
+        <div class="column-left">
+            <p class="wide-letters">C L I E N T E</p>
+            <p class="hora">16:20:00</p>
+            <p class="time-label">hh : mm : ss</p>
+        </div>
+        <div class="column-right">
+            <div class="log-console"></div>
+        </div>
+    </div>
+</body>
+</html>

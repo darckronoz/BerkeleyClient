@@ -1,0 +1,51 @@
+body {
+    background-color: #121212;
+    color: #fff;
+}
+
+.column-container {
+    display: flex;
+}
+
+.column-left {
+    flex: 0 0 60%;
+}
+
+.column-right {
+    flex: 0 0 40%;
+}
+
+.wide-letters {
+    font-family: 'Roboto Mono', monospace;
+    text-shadow: 0 0 10px rgb(17, 255, 0), 0 0 20px rgb(0, 101, 0), 0 0 40px rgb(0, 70, 0), 0 0 80px rgb(0, 50, 0), 0 0 120px rgb(0, 35, 0), 0 0 150px rgb(0, 20, 0);
+    font-size: 30px;
+    margin-top: 50px;
+    letter-spacing: 3.2vw; /* Espaciado entre letras de 0.5em */
+    text-align: center; /* Justificar el texto para llenar el espacio */
+}
+
+.hora {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 50px;
+    text-shadow: 0 0 10px rgb(13, 195, 0), 0 0 20px rgb(0, 101, 0), 0 0 40px rgb(0, 70, 0), 0 0 80px rgb(0, 50, 0), 0 0 120px rgb(0, 35, 0);
+    margin-top: 40vh;
+    margin-bottom: 0px;
+    letter-spacing: 0.8vw;
+    text-align: center;
+}
+
+.time-label {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 20px;
+    margin-top: 1px;
+    letter-spacing: 0.8vw;
+    text-align: center;
+}
+
+.log-console {
+    border-radius: 20px;
+    margin-top: 50px;
+    height: 87vh;
+    width: 35vw;
+    background-color: #000000;
+}
