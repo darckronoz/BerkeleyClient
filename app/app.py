@@ -47,7 +47,6 @@ def getdiff():
             hora_actual_utc = zona_horaria_utc.localize(mytime)
             utc_time = datetime.fromisoformat(new_time.rstrip("Z"))
             hosttime = utc_timezone.localize(utc_time)
-            hosttime = hosttime+timedelta(hours=5)
             sendlog('trying to get difference... mytime: ' + str(hora_actual_utc) + ' hosttime: ' + str(hosttime), ip_address)
             mydiff = int((hosttime-hora_actual_utc).total_seconds()*1000)
             sendlog('difference obtained, returning ok. ' + 'difference= ' + str(mydiff), ip_address)
@@ -69,7 +68,7 @@ def start_stream():
     while True:
         delta = timedelta(milliseconds=diff)
         hora_actual = datetime.now()
-        nueva_hora = hora_actual + delta - timedelta(hours=5)
+        nueva_hora = hora_actual + delta
         socketio.emit('update-time', nueva_hora.strftime('%H:%M:%S'))
         time.sleep(1)
 
